@@ -1,0 +1,6 @@
+name: fastapi-microservice
+channels:
+  - defaults
+dependencies:
+  - python=3.8
+prefix: C:\Users\daniele.uboldi\miniconda3\envs\fastapi-microservice
