@@ -1,10 +1,12 @@
 from sqlalchemy import (Column, Integer, MetaData, String, Table, ARRAY)
 from sqlalchemy import create_engine
-import os
+from app.config import config
+
 
 from databases import Database
 
-DATABASE_URI = os.getenv('DATABASE_URI')
+settings = config.Settings()
+DATABASE_URI = f"postgresql://{settings.database_user}:{settings.database_pwd}@{settings.database_host}/{settings.database_name}"
 
 engine = create_engine(DATABASE_URI)
 metadata = MetaData()
