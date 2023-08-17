@@ -15,6 +15,7 @@ def env_selection(env: str = ".env_default"):
 
 class Settings(BaseSettings):
     app_name: str = "Lightweight Microservice"
+    profile: str
     database_user: str
     database_pwd: str
     database_host: str

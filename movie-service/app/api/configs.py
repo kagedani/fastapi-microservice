@@ -16,6 +16,7 @@ configs = APIRouter()
 async def info(settings: Annotated[config.Settings, Depends(get_settings)]):
     return {
         "app_name": settings.app_name,
+        "profile": settings.profile,
         "database_name": settings.database_name,
         "database_user": settings.database_user,
         "database_host": settings.database_host
