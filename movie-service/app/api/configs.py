@@ -13,7 +13,7 @@ configs = APIRouter()
 
 
 @configs.get('/')
-async def info(settings: Annotated[config.Settings, Depends(get_settings)]):
+async def get_configs(settings: Annotated[config.Settings, Depends(get_settings)]):
     return {
         "app_name": settings.app_name,
         "profile": settings.profile,
